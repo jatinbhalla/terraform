@@ -1,6 +1,6 @@
 name: Terraform Demo
 parameters:
-  - name: Default
+  - name: agentPool
     displayName: "agent1"
     values:
       - default
