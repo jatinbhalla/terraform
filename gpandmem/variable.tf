@@ -5,24 +5,24 @@ variable "aduser" {
 }
 variable "adgroup" {
   type= string
-  default = "testjatin"
+  default = "testjatin1"
 }
 variable "apiname" {
   type = string
-  default = "jatintest"
+  default = "jatintest1"
 }
-variable "sql_server" {
-  type = string
-}
-variable "rule_name" {
-  type = string
-}
-variable "resource_group" {
-  type = string
-}
-variable "start_ip" {
-  type = string
-}
-variable "end_ip" {
-type = string
-}
+# variable "sql_server" {
+#   type = string
+# }
+# variable "rule_name" {
+#   type = string
+# }
+# variable "resource_group" {
+#   type = string
+# }
+# variable "start_ip" {
+#   type = string
+# }
+# variable "end_ip" {
+# type = string
+# }
