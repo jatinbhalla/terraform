@@ -24,7 +24,7 @@ jobs:
         displayName: Terraform Init
         inputs:
           command: 'init'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/gpandmem'
           backendType: 'azurerm'
           backendServiceArm: '$(service_connection)'
           ensureBackend: true
@@ -39,7 +39,7 @@ jobs:
         inputs:
           provider: 'azurerm'
           command: 'plan'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/gpandmem'
           commandOptions: '-lock=false -input=false -out=tfplan -var-file="variable.auto.tfvars"'
           environmentServiceNameAzureRM: $(service_connection)
           publishPlanResults: "tfplan"
@@ -49,7 +49,7 @@ jobs:
         inputs:
           provider: 'azurerm'
           command: 'apply'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/gpandmem'
           commandOptions: '-input=false -auto-approve tfplan'
           environmentServiceNameAzureRM: $(service_connection)
         enabled: false
@@ -59,7 +59,7 @@ jobs:
         inputs:
           provider: 'azurerm'
           command: 'destroy'
-          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
+          workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform/gpandmem'
           commandOptions: '-lock=false -input=false -auto-approve -var-file="variable.auto.tfvars"'
           environmentServiceNameAzureRM: $(service_connection)
         enabled: true
