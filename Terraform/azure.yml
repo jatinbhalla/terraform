@@ -52,7 +52,7 @@ jobs:
           workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
           commandOptions: '-input=false -auto-approve tfplan'
           environmentServiceNameAzureRM: $(service_connection)
-        enabled: false
+        enabled: true
           
       - task: TerraformTaskV2@2
         displayName: Terraform Destroy
@@ -62,4 +62,4 @@ jobs:
           workingDirectory: '$(System.DefaultWorkingDirectory)/Terraform'
           commandOptions: '-lock=false -input=false -auto-approve -var-file="variable.auto.tfvars"'
           environmentServiceNameAzureRM: $(service_connection)
-        enabled: true
+        enabled: false

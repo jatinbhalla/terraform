@@ -5,11 +5,11 @@ variable "aduser" {
 }
 variable "adgroup" {
   type= string
-  default = "testjatin1"
+  default = "testjatin2"
 }
 variable "apiname" {
   type = string
-  default = "jatintest1"
+  default = "jatintest2"
 }
 # variable "sql_server" {
 #   type = string
