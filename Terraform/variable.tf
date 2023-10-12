@@ -7,10 +7,10 @@ variable "adgroup" {
   type= string
   default = "testjatin5"
 }
-variable "apiname" {
-  type = string
-  default = "jatintest5"
-}
+# variable "apiname" {
+#   type = string
+#   default = "jatintest5"
+# }
 # variable "sql_server" {
 #   type = string
 # }

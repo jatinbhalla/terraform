@@ -12,10 +12,10 @@ module "adgroup" {
   display_name1 = var.adgroup
 }
 
-module "api" {
-  source = "../Terraform/adapi"
-  api= var.apiname
-}
+# module "api" {
+#   source = "../Terraform/adapi"
+#   api= var.apiname
+# }
 
 # module "apipermission" {
 #   source = "../Terraform/apipermission"
